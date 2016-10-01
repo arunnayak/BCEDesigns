@@ -8,8 +8,6 @@ Author name<br/>
   - npm install <br/>
   - gulp <br/>
 
-<br/>
-<br/>
 
  Prerequisites <br/>
   - nodejs
