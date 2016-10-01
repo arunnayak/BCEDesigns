@@ -2,7 +2,6 @@ Author name<br/>
  - Shane
 
 <br/>
-<br/>
 
  Project setup <br/>
   - Clone the repo <br/>
