@@ -34,3 +34,8 @@ website:   	http://www.themepunch.com
 		position:relative;
 		padding:0;
 }
+.f-inner:hover .conatct{
+	color: #fff !important;
+}
+
+
