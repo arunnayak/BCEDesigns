@@ -21,7 +21,7 @@
 			
 			navigationType:"none",
 			navigationArrows:"solo",
-			navigationStyle:"preview1",
+			//navigationStyle:"preview1",
 			
 			touchenabled:"off",
 			onHoverStop:"off",
@@ -615,49 +615,22 @@
 
 	});
 
-	/* ==============================================
-		GOOGLE MAPS
-	=============================================== */
-
-		function initialize() {
-		var myLatlng = new google.maps.LatLng(-33.910157, 151.202467); // Change your location Latitude and Longitude 
-		var mapOptions = {
-		zoom: 15,
-		center: myLatlng
-		}
-		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-	// Disabled Map Scroll in Contact Page 
-		map.setOptions({'scrollwheel': false});
-
-	// Black and White style for Google Map
-		var styles = [
-		{
-		stylers: [
-		{ saturation: -100 }
-		]
-		},{
-		featureType: "road",
-		elementType: "geometry",
-		stylers: [
-		{ lightness: -8 },
-		{ visibility: "simplified" }
-		]
-		},{
-		featureType: "road",
-		elementType: "labels",
-		}
-		];
-		map.setOptions({styles: styles});
-
-	// Google Map Maker 
-		var marker = new google.maps.Marker({
-		position: myLatlng,
-		map: map,
+	$('#new-wrapper-load').on('click', function(){
+		console.log('hello');
+		var dir = "/images/works";
+		var fileextension = ".jpg";
+		$.ajax({
+		    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+		    url: dir,
+		    success: function (data) {
+		        //List all .png file names in the page
+		        console.log(data)
+		    }
 		});
-		}
+	})
 
-		google.maps.event.addDomListener(window, 'load', initialize);       
+	
+
 
 
 })(jQuery, window, document);
